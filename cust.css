@@ -1,0 +1,426 @@
+:root {
+  --red: #ee2431;
+  --black: #070707;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--black);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+.site-header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 6px 21px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand img {
+  display: block;
+  width: 98px;
+  height: auto;
+  object-fit: contain;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 39px;
+  margin-left: auto;
+}
+
+.main-nav a {
+  color: var(--black);
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.main-nav .active {
+  color: var(--red)
+}
+
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ed1c24;
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 99px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.cta-icon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1); /* makes the + icon white if it's a dark svg */
+}
+
+
+.hero {
+  padding: 56px 20px 63px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(42px, 4.72vw, 66px);
+  line-height: 1.15;
+  letter-spacing: -2.2px;
+}
+
+.hero p {
+  margin: 20px 0 0;
+  font-size: 25px;
+  line-height: 1.3;
+  letter-spacing: -0.65px;
+}
+
+.customer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 31px;
+  padding: 0 15px;
+}
+
+/* 13 cards: 3 / 3 / 3 / 3 / 1 */
+.customer-card {
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.card-media {
+  flex: 0 0 60%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px 25px;
+  background: #000000;
+  color: #ffffff;
+}
+
+.background-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.card-logo {
+  position: relative;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.card-media h2 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(29px, 2.65vw, 37px);
+  line-height: 1.06;
+  letter-spacing: -1.3px;
+}
+
+.card-content {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 25px;
+}
+
+.card-content p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.36;
+  letter-spacing: -0.35px;
+}
+
+.card-content a {
+  margin-top: auto;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card-content a span {
+  font-size: 23px;
+  line-height: 0;
+  vertical-align: -1px;
+}
+
+.blue .card-content {
+  background: #94a9cd;
+}
+
+.pink .card-content {
+  background: #f36bc8;
+}
+
+.purple .card-content {
+  background: #aa99cc;
+}
+
+.yellow .card-content {
+  background: #f6cc77;
+}
+
+.green .card-content {
+  background: #9cc8a7;
+}
+
+.orange .card-content {
+  background: #efad82;
+}
+
+.lavender .card-content {
+  background: #c3b1dd;
+}
+
+.coral .card-content {
+  background: #f39a91;
+}
+
+.sky .card-content {
+  background: #92c5e2;
+}
+
+.mint .card-content {
+  background: #a8d8cc;
+}
+
+.peach .card-content {
+  background: #eec3a6;
+}
+
+.lilac .card-content {
+  background: #d0bae1;
+}
+
+.rose .card-content {
+  background: #e8a4b7;
+}
+
+.company {
+  padding: 110px 30px 85px;
+  text-align: center;
+}
+
+.company h2 {
+  margin: 0 0 70px;
+  font-size: clamp(38px, 4vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -1.7px;
+}
+
+.company h2 span {
+  color: var(--red);
+}
+
+.partner-logos {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 60px 48px;
+  align-items: center;
+}
+
+.partner-logos img {
+  width: 100%;
+  max-width: 115px;
+  height: 105px;
+  justify-self: center;
+  object-fit: contain;
+}
+
+.site-footer {
+  padding: 95px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  text-align: center;
+}
+
+.footer-brand {
+  display: block;
+  line-height: 0;
+}
+
+.footer-brand img {
+  display: block;
+  width: 62px;
+  height: auto;
+  object-fit: contain;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-top: 29px;
+}
+
+.socials a {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+}
+
+.socials img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 19px;
+  margin-top: 39px;
+}
+
+.footer-links a {
+  color: var(--black);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.site-footer p {
+  margin: 40px 0 0;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    gap: 16px;
+  }
+
+  .main-nav {
+    gap: 18px;
+  }
+
+  .customer-grid {
+    gap: 16px;
+  }
+
+  .customer-card {
+    height: 500px;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 14px 20px;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 4px 0 0;
+    overflow-x: auto;
+  }
+
+  .main-nav a {
+    font-size: 14px;
+  }
+
+  .cta {
+    min-width: auto;
+    margin-left: auto;
+  }
+
+  .hero {
+    padding: 56px 20px 42px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1.5px;
+  }
+
+  .hero p {
+    font-size: 19px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .customer-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .customer-card {
+    height: 500px;
+  }
+
+  .partner-logos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 20px;
+  }
+
+  .partner-logos img {
+    height: 80px;
+  }
+
+  .company {
+    padding: 75px 20px;
+  }
+
+  .company h2 {
+    margin-bottom: 48px;
+  }
+}
